@@ -1,0 +1,73 @@
+a{
+    text-decoration: none !important;
+}
+
+img{
+    width: 700px;
+}
+
+.logo{
+    text-shadow: 2px 2px 10px rgb(56, 56, 56);
+}
+
+.active{
+    background-color: aliceblue;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.ichigo{
+    color: chocolate !important;
+    font-weight: 700;
+}
+
+.bg-ichigo{
+    background-color: chocolate !important;
+}
+
+.bg-off{
+    background-color: #000;
+}
+
+.scroll-comments{
+    max-height: 300px !important;
+    overflow: auto !important;
+    scroll-behavior: smooth;
+}
+
+.scroll-message{
+    max-height: 200px !important;
+    overflow: auto !important;
+    scroll-behavior: smooth;
+}
+
+
+.bg-comment{
+    background: #e2e3e5;
+}
+
+.position-chat-icon{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    font-size: 300% !important;
+}
+
+.like-tag{
+    position: relative;
+}
+
+.like-tag::after{
+    content: attr(data-tag);
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: small;
+    color: #e2e3e5;
+    background-color: #720000;
+}
