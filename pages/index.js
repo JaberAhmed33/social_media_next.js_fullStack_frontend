@@ -46,6 +46,7 @@ const Home = ({posts}) => {
     <div className="container-fluid">
         <div className="row">
           <BgImage url={"../images/c6573d5a766e2b58f3ccee4b92636159.jpg"} />
+    <p>hiiiiiiiiiiiiiii</p>
         </div>
       </div>
 
