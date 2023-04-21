@@ -65,7 +65,7 @@ const Home = ({posts}) => {
 
 export async function getServerSideProps() {
   //not dynamic url
-  const { data } = await axios.get("http://localhost:7000/api/posts");
+  const { data } = await axios.get("https://facedook-server.onrender.com/api");
   return {
     props: {
       posts: data,
