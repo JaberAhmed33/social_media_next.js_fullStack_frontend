@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 import { Modal, Avatar } from "antd";
 import Link from "next/link";
 import AuthForm from "../../../components/forms/AuthForm";
-import {useRouter} from "next/router";
 import { UserContext } from "../../../context";
 import { Loading3QuartersOutlined, CameraOutlined } from "@ant-design/icons";
 import BgImage from "../../../components/cards/BgImage";
@@ -22,7 +21,6 @@ const ProfileUpdate = () => {
   const [image, setImage] = useState({});
   const [uploading, setUploading] = useState(false);
 
-  const router = useRouter();
 
   useEffect(() => {
     if(state && state.user ){

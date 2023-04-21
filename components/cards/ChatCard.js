@@ -1,17 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context";
-import UserRoute from "../routes/UserRoute";
 import CreatemessageForm from "./../../components/forms/ChatForm";
-import { useRouter } from "next/router";
 import axios from "axios";
 import { toast } from 'react-toastify';
-import PostList from './PostsList';
-import People from './People';
-import Link from "next/link";
-import { Modal, Pagination } from "antd";
-import CommentForm from "../forms/CommentForm"
-import SearchBar from "../SearchBar";
-import BgImage from "./BgImage";
+
 import io from "socket.io-client";
 import MessagesList from "./MessagesList";
 
@@ -26,9 +18,7 @@ function ChatCard() {
   const [image, setImage] = useState({});
   const [uploading, setUploading] = useState(false);
   const [isScrollDown, setIsScrollDown] = useState(false);
-  const [newsFeed, setNewsFeed] = useState([]);
 
-  const router = useRouter();
 
   useEffect(() => {
 

@@ -1,5 +1,4 @@
-import { useContext, useState, useEffect } from "react";
-import { UserContext } from "../../context";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import { toast } from 'react-toastify';

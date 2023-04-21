@@ -10,10 +10,9 @@ import { List, Avatar } from 'antd';
 import { imageAvatar } from "../../functions";
 
 function Admin() {
-  const [state, setState] = useContext(UserContext);
+  const [state] = useContext(UserContext);
   const [posts, setPosts] = useState([]);
 
-  const router = useRouter();
 
   useEffect(() => {
     if (state && state.token) {

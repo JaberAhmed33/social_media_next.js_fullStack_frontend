@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context";
 import { useRouter } from "next/router";
 import axios from "axios";
-import { List, Card } from "antd";
+import { Card } from "antd";
 import { RollbackOutlined } from "@ant-design/icons";
 import Link from "next/link";
 import { toast } from "react-toastify";

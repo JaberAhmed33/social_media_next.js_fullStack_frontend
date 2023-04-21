@@ -2,7 +2,6 @@ import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context";
 import UserRoute from "./../../components/routes/UserRoute";
 import CreatePostForm from "./../../components/forms/CreatePostForm";
-import { useRouter } from "next/router";
 import axios from "axios";
 import { toast } from 'react-toastify';
 import PostList from './../../components/cards/PostsList';
@@ -32,7 +31,6 @@ function DashboardHome() {
   const [page, setPage] = useState(1);
 
 
-  const router = useRouter();
 
   useEffect(() => {
 

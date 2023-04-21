@@ -1,17 +1,4 @@
-import { useContext } from "react";
-import { UserContext } from "../../context";
-import { useRouter } from "next/router";
-import Moment from "react-moment";
-import parse from "html-react-parser";
-import {
-  HeartFilled,
-  CommentOutlined,
-  HeartOutlined,
-  DeleteOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
-import { imageAvatar } from "../../functions";
-import Link from "next/link";
+
 import Post from "./Post";
 
 function PostList({
@@ -22,9 +9,7 @@ function PostList({
   handleComment,
   removeComment
 }) {
-  const [state] = useContext(UserContext);
-  const router = useRouter();
-
+ 
   return (
     <>
       {posts &&

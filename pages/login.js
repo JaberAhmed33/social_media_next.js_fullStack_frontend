@@ -1,9 +1,8 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { Modal } from "antd";
 import Link from "next/link";
-import AuthForm from "../components/forms/authForm";
+import AuthForm from "../components/forms/AuthForm";
 import {useRouter} from "next/router";
 import { UserContext } from "../context";
 import BgImage from "../components/cards/BgImage";

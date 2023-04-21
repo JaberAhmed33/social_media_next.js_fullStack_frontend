@@ -1,18 +1,8 @@
-import { useContext, useEffect, useRef } from "react";
-import { UserContext } from "../../context";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Moment from "react-moment";
 import parse from "html-react-parser";
-import {
-  HeartFilled,
-  CommentOutlined,
-  HeartOutlined,
-  DeleteOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
-import Link from "next/link";
-import Post from "./Post";
-import { Popover , Image, Badge } from "antd";
+import { Popover , Image } from "antd";
 import { imageAvatar } from "../../functions/index";
 import ChatBtns from "./ChatBtns";
 
@@ -22,10 +12,8 @@ function MessagesList({
   handleLike,
   handleUnlike,
   isScrollDown,
-  setIsScrollDown,
 }) {
 
-  const router = useRouter();
   const scrollEle = useRef();
 
   let float = "start";

@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 
 
 function Editpost() {
-  const [post, setPost] = useState({});
   const [content, setContent] = useState("");
   const [image, setimage] = useState({});
   const [uploading, setUploading] = useState(false);
@@ -20,10 +19,8 @@ function Editpost() {
 
   const fetchPost = async () => {
     try {
-      console.log(_id);
 
       const { data } = await axios.get(`/user-post/${_id}`);
-      setPost(data);
       setContent(data.content);
       setimage(data.image)
     } catch (err) {

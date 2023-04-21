@@ -1,6 +1,5 @@
 import { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context";
-import { useRouter } from "next/router";
 import axios from "axios";
 import { List } from "antd";
 import { RollbackOutlined } from "@ant-design/icons";
@@ -12,7 +11,6 @@ function Following() {
   const [state, setState] = useContext(UserContext);
   const [people, setPeople] = useState([]);
 
-  const router = useRouter();
 
   useEffect(() => {
     if (state && state.token) {
