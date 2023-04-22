@@ -46,8 +46,11 @@ function MessagesList({
               <Moment fromNow>{message.createdAt}</Moment>
             </small>
             <div className="col-md-2">
-            {imageAvatar(message.sendBy, 30)}
-            <p>{message.sendBy.name}</p>
+            <Link href={`/user/${message.sendBy.username}`}> 
+              {imageAvatar(message.sendBy, 30)}
+              <p>{message.sendBy.name}</p>
+            </Link>
+            
             </div>
             
             
