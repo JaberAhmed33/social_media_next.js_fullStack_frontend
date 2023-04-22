@@ -11,8 +11,9 @@ const socket = io(process.env.NEXT_PUBLIC_SOCKETIO, {
   reconnection: true,
 }); 
 
-const Home = ({posts}) => {
+const Home = () => {
   const [newsFeed, setNewsFeed] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [state] = useContext(UserContext);
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const Home = ({posts}) => {
         ...posts,
       ]);
     })
+    getPosts()
   }, []);
 
 //make header dynamic (vedio course #43)
@@ -37,6 +39,11 @@ const Home = ({posts}) => {
     </Head>
 
   );
+
+   async function getPosts() {
+       const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API}/posts`);
+       setPosts(data);
+    }
 
   const mixedPosts = newsFeed.length > 0 ? newsFeed : posts;
 
@@ -63,15 +70,14 @@ const Home = ({posts}) => {
   );
 };
 
-export async function getServerSideProps() {
-  //not dynamic url
-    const { data } = await axios.get("https://facedook-server.onrender.com/api/posts");
-  console.log(proses.env.NEXT_PUBLIC_API);
-  return {
-    props: {
-      posts: data,
-    },
-  };
-}
+// export async function getServerSideProps() {
+//   //not dynamic url
+//   const { data } = await axios.get("http://localhost:7000/api/posts");
+//   return {
+//     props: {
+//       posts: data,
+//     },
+//   };
+// }
 
 export default Home;
