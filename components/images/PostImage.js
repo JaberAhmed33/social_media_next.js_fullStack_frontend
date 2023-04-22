@@ -1,11 +1,9 @@
+import {Image } from "antd";
+
 function PostImage({ url, name }) {
   return (
     <div className="mt-3 text-center">
-      <img
-        className="img-fluid rounded "
-        src={url}
-        alt={name}
-      />
+      <Image width={"50%"} src={url} alt={name} className=" rounded "/>
     </div>
   );
 }
