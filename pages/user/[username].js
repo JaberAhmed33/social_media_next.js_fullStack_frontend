@@ -46,8 +46,6 @@ function Username() {
     toast.success(`Unfollowed ${user.name}`);
   };
 
-  console.log(user)
-
   return (
     <div className="row col-md-6 offset-md-3">
       <div className="pt-5 pb-5">
