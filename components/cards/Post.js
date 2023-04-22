@@ -35,7 +35,9 @@ function Post({
               {imageAvatar(post.postedBy, 40)}
               {""}
 
+              <Link href={`/user/${post.postedBy.username}`}>
               <span className="pt-2 ms-3 h5 ichigo">{post.postedBy.name}</span>
+              </Link>
               <span className="pt-2 ms-3">
                 <small className="text-muted">
                   <Moment fromNow>{post.createdAt}</Moment>
