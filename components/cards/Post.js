@@ -12,6 +12,7 @@ import {
   EditOutlined,
 } from "@ant-design/icons";
 import { imageAvatar } from "../../functions";
+import Link from "next/link";
 
 function Post({
   post,
