@@ -65,8 +65,7 @@ const Home = ({posts}) => {
 
 export async function getServerSideProps() {
   //not dynamic url
-//   const { data } = await axios.get("https://facedook-server.onrender.com/api");
-    const { data } = await axios.get(`${proses.env.NEXT_PUBLIC_API}/api/posts`);
+    const { data } = await axios.get("https://facedook-lilac.vercel.app/api/posts");
   console.log(proses.env.NEXT_PUBLIC_API);
   return {
     props: {
