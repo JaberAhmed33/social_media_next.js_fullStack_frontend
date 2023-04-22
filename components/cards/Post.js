@@ -35,7 +35,7 @@ function Post({
             <div className="card-header">
              
 
-              <Link href={!clickable ? `/user/${post.postedBy.username}` : "/login"}> 
+              <Link href={clickable ? `/user/${post.postedBy.username}` : "/login"}> 
                 {imageAvatar(post.postedBy, 40)}
                 {""}
                 <span className="pt-2 ms-3 h5 ichigo">{post.postedBy.name}</span>
