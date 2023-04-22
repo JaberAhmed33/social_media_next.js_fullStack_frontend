@@ -12,18 +12,19 @@ const socket = io(process.env.NEXT_PUBLIC_SOCKETIO, {
 }); 
 
 const Home = () => {
-  const [newsFeed, setNewsFeed] = useState([]);
+  // const [newsFeed, setNewsFeed] = useState([]);
   const [posts, setPosts] = useState([]);
   const [state] = useContext(UserContext);
 
   useEffect(() => {
-    socket.on("new-post", (newPost) => {
-      setNewsFeed([
-        newPost,
-        ...posts,
-      ]);
-    })
     getPosts()
+    socket.on("new-post", () => {
+      getPosts()
+      // setNewsFeed([
+      //   newPost,
+      //   ...posts,
+      // ]);
+    })
   }, []);
 
 //make header dynamic (vedio course #43)
@@ -45,7 +46,7 @@ const Home = () => {
        setPosts(data);
     }
 
-  const mixedPosts = newsFeed.length > 0 ? newsFeed : posts;
+  // const mixedPosts = newsFeed.length > 0 ? newsFeed : posts;
 
   return (
     <>
@@ -58,7 +59,7 @@ const Home = () => {
 
       <div className="container">
         <div className="row pt-5">
-          {mixedPosts.map((post) => (
+          {posts.map((post) => (
             <div key={post._id}  className="col-md-4" >
               <Post post={post} clickable = {true} postPublic = {true}/>
             </div>
